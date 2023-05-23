@@ -10,6 +10,54 @@
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <style>
+    .border {
+      border: 2px solid;
+      border-radius: 12px;
+      padding: 5px;
+      border-style: groove;
+    }
+
+    .container2 {
+      padding: 2rem;
+      background-color: #fafafa;
+    }
+
+    .filters label {
+      display: block;
+    }
+
+    body {
+      background-color: #fafafa;
+    }
+
+    a,
+    a:hover {
+      color: black;
+      text-decoration: none;
+    }
+
+    .grid-item {
+      font-weight: bold;
+      width: 250px;
+      height: 400px;
+      padding: 0px;
+      margin: 5px;
+      text-align: center;
+      background: #ffffff;
+      float: left;
+    }
+
+    .btny {
+      border-color: hsl(50, 58%, 68%);
+      color: hsl(50, 58%, 68%);
+    }
+
+    .btny:hover {
+      background-color: hsl(50, 58%, 68%);
+      color: white;
+    }
+  </style>
 
   <title>Nexus Informática</title>
 
@@ -95,11 +143,11 @@
   <div class="container-fluid">
 
     <h3 class="display-3">Bem vindo a Nexus Informática!</h3>
-   
+
     <div class="alert alert-success" role="alert">
       Use o cupom de desconto NEXUS20 para 20% de desconto em sua primeira compra!
     </div>
-   
+
   </div>
   <div class="container-fluid" style="width:auto">
     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="width:100%">
@@ -111,8 +159,9 @@
       </ol>
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img class="d-block w-100" src="https://aqzrxtxcxr.cloudimg.io/www.hardwaretimes.com/wp-content/uploads/2022/03/Screenshot-2022-03-02-at-02-58-16-Photo-by-ELLA-DON-on-Unsplash-scaled.jpg?w=2048" width="1920" height="1080"
-            alt="First slide">
+          <img class="d-block w-100"
+            src="https://aqzrxtxcxr.cloudimg.io/www.hardwaretimes.com/wp-content/uploads/2022/03/Screenshot-2022-03-02-at-02-58-16-Photo-by-ELLA-DON-on-Unsplash-scaled.jpg?w=2048"
+            width="1920" height="1080" alt="First slide">
         </div>
         <div class="carousel-item">
           <img class="d-block w-100"
@@ -120,14 +169,10 @@
             width="1920" height="1080" alt="Second slide">
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100"
-            src="Images/Partes.jpg"
-            width="1920" height="1080" alt="Third slide">
+          <img class="d-block w-100" src="Images/Partes.jpg" width="1920" height="1080" alt="Third slide">
         </div>
         <div class="carousel-item">
-          <img class="d-block w-100"
-            src="Images/Setup-Sim.png"
-            width="1920" height="1080" alt="Fourth slide">
+          <img class="d-block w-100" src="Images/Setup-Sim.png" width="1920" height="1080" alt="Fourth slide">
         </div>
       </div>
       <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -179,7 +224,8 @@
               <p class="card-text">Periféricos e acessórios</p>
               <div class="d-flex justify-content-between align-items-center">
                 <div class="btn-group">
-                  <button type="button" class="btn btn-sm btn-outline-secondary">Ver Mais</button>
+                  <a href="perifericoseacessorios.html"><button type="button"
+                      class="btn btn-sm btn-outline-secondary">Ver Mais</button></a>
                 </div>
               </div>
             </div>
@@ -231,8 +277,7 @@
           <div class="card mb-4 shadow-sm">
             <img class="card-img-top"
               data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail"
-              alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;"
-              src="Images/SSD1.png"
+              alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="Images/SSD1.png"
               data-holder-rendered="true">
             <div class="card-body">
               <p class="card-text">SSDs e Armazenamento</p>
@@ -263,18 +308,99 @@
         </div>
         <!-- END OF ROW -->
       </div>
-</div>
-</div>
-<br>
+    </div>
+  </div>
+  <br>
+  <div class="container container2">
+
+
+    <div class="row">
+      <div class="col-md-3 border">
+
+        <strong>Filtros</strong>
+        <br>
+        <br>
+        <div id="output"></div>
+        <br>
+        <p class="filters">
+
+          <label><input type="checkbox" value=".Periféricos" checked /> Periféricos</label>
+          <label><input type="checkbox" value=".Acessórios" checked /> Acessórios</label>
+
+          <label><input type="checkbox" value=".b, .c3" /> 3 CAN (Controller Area Network)</label>
+          <label><input type="checkbox" value=".b, .c4" /> 4 Motion</label>
+          <label><input type="checkbox" value=".b, .c5" /> 5 OPC (OLE for Process COntrol)</label>
+          <label><input type="checkbox" value=".b, .c6" /> 6 OptimizePRO</label>
+          <label><input type="checkbox" value=".b, .c7" /> 7 RealTimePRO</label>
+          <label><input type="checkbox" value=".b, .c8" /> 8 Serial</label>
+          <label><input type="checkbox" value=".b, .c9" /> 9 StateCharts</label>
+          <label><input type="checkbox" value=".b, .c10" /> 10 UDP (User Diagram Protocol)</label>
+
+
+          <!-- # -->
+          <label><input type="checkbox" value=".a, .c11" /> 11 VisSim Embedded</label>
+          <label><input type="checkbox" value=".a, .c12" /> 12 Fixed Point</label>
+          <label><input type="checkbox" value=".a, .c13" /> 13 C-Code Gen</label>
+          <label><input type="checkbox" value=".a, .c14" /> 14 Code Gen All Targets</label>
+
+          <!-- # -->
+          <label><input type="checkbox" value=".b, .c, .c15" /> 15 Comm</label>
+
+          <!-- # -->
+          <label><input type="checkbox" value=".a, .d, .c16" /> 16 Digital Power Designer</label>
+          <label><input type="checkbox" value=".a, .e, .c17" /> 17 C-Code Library Source Code</label>
+          <label><input type="checkbox" value=".a, .f, .c18" /> 18 Target Support Library Source Code</label>
+
+
+          <!--  #  -->
+          <label><input type="checkbox" value=".b, .c19" /> 19 VisSim PE (100 Block Limit)</label>
+          <label><input type="checkbox" value=".b, .c20" /> 20 VisSim / Comm PE Suite</label>
+          <label><input type="checkbox" value=".a, .c21" /> 21 VisSim / Embedded PE Suite</label>
+
+        </p>
+
+
+
+
+      </div>
+      <!-- /.col-md-6 -->
+      <div class="col-md-9">
+        <div class="grid">
+          <div class="grid-item Periféricos shadow-sm btn-group">
+            <a href="3-Contato.html"><img class=""
+                src="https://images.kabum.com.br/produtos/fotos/458721/console-nintendo-switch-modelo-oled-edicao-especial-the-legend-of-zelda-tears-of-the-kingdom-hbgskdaa2_1683315478_m.jpg">aaaaaaaa
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <br>
+              <button type="button" class="btn btny ">Comprar</button>
+            </a>
+
+          </div>
+          <div class="grid-item Acessórios shadow-sm">Acessórios</div>
+          <div class="grid-item c shadow-sm">c. Comm Module</div>
+          <div class="grid-item d shadow-sm">d. Digital Power Designer Module</div>
+          <div class="grid-item e shadow-sm">e. Embed C-Code Library Source Code Module</div>
+          <div class="grid-item f shadow-sm">f. Embed Support Library Source Code Module</div>
+
+        </div>
+      </div>
+    </div>
+    <!-- /.col-md-6 -->
+  </div>
+  <!-- /.row -->
+
   <!-- Footer -->
   <footer class="text-center text-lg-start bg-dark text-white">
     <!-- Section: Social media -->
     <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
       <!-- Left -->
-     
+
       </div>
       <!-- Left -->
-  
+
       <!-- Right -->
       <div>
         <a href="" class="me-4 text-reset">
@@ -299,7 +425,7 @@
       <!-- Right -->
     </section>
     <!-- Section: Social media -->
-  
+
     <!-- Section: Links  -->
     <section class="">
       <div class="container text-center text-md-start mt-5">
@@ -316,13 +442,13 @@
               a um preço acessível com atendimento de ponta.
             </p>
           </div>
-  
-  
+
+
           <!-- Grid column -->
           <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
             <!-- Links -->
             <h6 class="text-uppercase fw-bold mb-4">
-             Índice
+              Índice
             </h6>
             <p>
               <a href="2-Pedidos.html" class="text-reset">Pedidos</a>
@@ -338,7 +464,7 @@
             </p>
           </div>
           <!-- Grid column -->
-  
+
           <!-- Grid column -->
           <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
             <!-- Links -->
@@ -356,7 +482,7 @@
       </div>
     </section>
     <!-- Section: Links  -->
-  
+
     <!-- Copyright -->
     <!-- <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
       © 2021 Copyright:
@@ -370,10 +496,7 @@
 
 
 
-</d
-
-
-  <!-- Optional JavaScript -->
+  </d <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
     integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -384,6 +507,91 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
+    <script src="https://cpwebassets.codepen.io/assets/common/stopExecutionOnTimeout-2c7831b….js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+  <script>
+    $(document).ready(function () {
+      // executes when HTML-Document is loaded and DOM is ready
+      console.log("document is ready");
+
+
+      var $output = $('#output');
+
+
+      var $container = $('.grid').isotope({
+        itemSelector: '.grid-item',
+        layoutMode: 'fitRows'
+      });
+
+
+
+      // filter with selects and checkboxes
+      var $checkboxes = $('.filters input');
+
+      $checkboxes.change(function () {
+        // map input values to an array
+        var inclusives = [];
+        // inclusive filters from checkboxes
+        $checkboxes.each(function (i, elem) {
+          // if checkbox, use value if checked
+          if (elem.checked) {
+            inclusives.push(elem.value);
+          }
+
+
+
+
+
+
+          if ($.inArray(".c11", inclusives) !== -1) {
+
+            alert('test');
+            var removeItem = ".b";
+            inclusives.splice($.inArray(removeItem, inclusives), 1);
+            console.log(inclusives);
+          }
+
+
+
+
+
+        });
+
+
+
+        console.log(inclusives);
+        // combine inclusive filters
+        var filterValue = inclusives.length ? inclusives.join(', ') : '*';
+
+        console.log('filter value' + filterValue);
+        $output.text(filterValue);
+        $container.isotope({ filter: filterValue })
+      });
+
+
+
+
+
+
+
+
+
+
+
+      // document ready  
+    });
+
+
+    $(window).load(function () {
+      // executes when complete page is fully loaded, including all frames, objects and images
+      console.log("window is loaded");
+
+
+      // window load  
+    });
+  </script>
 </body>
 
 </html>
